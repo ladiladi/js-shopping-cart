@@ -2,38 +2,38 @@ let carts = document.querySelectorAll('.add-cart');
 
 let products = [
     {
-        name: 'White T-shirt',
-        tag: 'whitetshirt',
+        name: 'Black T-shirt',
+        tag: 'cotton-black',
         price: 15,
         inCart: 0
     },
     {
         name: 'Blue T-shirt',
-        tag: 'bluetshirt',
+        tag: 'blue',
         price: 15,
         inCart: 0
     },
     {
-        name: 'Orange T-shirt',
-        tag: 'orangetshirt',
+        name: 'Striped T-shirt',
+        tag: 'stripes',
         price: 15,
         inCart: 0
     },
     {
-        name: 'Polo shirt',
-        tag: 'polotshirt',
+        name: 'Beige T-shirt',
+        tag: 'beige',
         price: 16,
         inCart: 0
     },
     {
-        name: 'Image T-shirt',
-        tag: 'imagetshirt',
+        name: 'Good Vibes T-shirt',
+        tag: 'purple',
         price: 18,
         inCart: 0
     },
     {
-        name: 'Black T-shirt',
-        tag: 'blacktshirt',
+        name: 'Red T-shirt',
+        tag: 'red',
         price: 15,
         inCart: 0
     }
@@ -113,17 +113,17 @@ function displayCart() {
             productContainer.innerHTML += `
             <div class="product">
                 <ion-icon name="close-circle"></ion-icon>
-                <img src="./images/${item.tag}.png"
+                <img src="./images/${item.tag}.jpg"
                 <span>${item.name}</span>
             </div>
-            <div class="price">${item.price}</div>
+            <div class="price">${item.price},00 €</div>
             <div class="quantity">
-                <ion-icon name="arrow-down-circle-outline"></ion-icon>
+                <ion-icon class="decrease" name="arrow-down-circle-outline"></ion-icon>
                 <span>${item.inCart}</span>
-                <ion-icon name="arrow-up-circle-outline"></ion-icon>
+                <ion-icon class="increase" name="arrow-up-circle-outline"></ion-icon>
             </div>
             <div class="total">
-                ${item.inCart * item.price},00€
+                ${item.inCart * item.price},00 €
             </div>
             `;
         });
@@ -134,7 +134,7 @@ function displayCart() {
                     Basket Total
                 </h4>
                 <h4 class="basketTotal">
-                    ${cartCost},00€
+                    ${cartCost},00 €
                 </h4>
             </div>
         `;

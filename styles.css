@@ -140,6 +140,7 @@ li a {
 
 .product-title {
     width: 45%;
+    border-bottom: 1px solid lightgrey;
 }
 
 .price {
@@ -150,7 +151,7 @@ li a {
 }
 
 .quantity {
-    width: 10%;
+    width: 30%;
     border-bottom: 1px solid lightgrey;
     display: flex;
     align-items: center;
@@ -158,7 +159,7 @@ li a {
 
 .total {
     width: 10%;
-    border-bottom: 4px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
     display: flex;
     align-items: center;
 }
@@ -172,8 +173,14 @@ li a {
     border-bottom: 1px solid lightgrey;
 }
 
-.product ion-icon {
+.product ion-icon,
+.quantity ion-icon {
     cursor: pointer;
+}
+.products {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .products img {
