@@ -112,15 +112,15 @@ function displayCart() {
         Object.values(cartItems).map(item => {
             productContainer.innerHTML += `
             <div class="product">
-                <ion-icon name="close-circle"></ion-icon>
+                <ion-icon name="close-circle" onclick="removeItem(${item.tag})"></ion-icon>
                 <img src="./images/${item.tag}.jpg"
                 <span>${item.name}</span>
             </div>
             <div class="price">${item.price},00 €</div>
             <div class="quantity">
-                <ion-icon class="decrease" name="arrow-down-circle-outline"></ion-icon>
+                <ion-icon class="decrease" name="arrow-down-circle-outline" onclick="decreaseQuantity(${item.tag})"></ion-icon>
                 <span>${item.inCart}</span>
-                <ion-icon class="increase" name="arrow-up-circle-outline"></ion-icon>
+                <ion-icon class="increase" name="arrow-up-circle-outline" onclick="increaseQuantity(${item.tag})"></ion-icon>
             </div>
             <div class="total">
                 ${item.inCart * item.price},00 €
@@ -139,6 +139,18 @@ function displayCart() {
             </div>
         `;
     }
+}
+
+function removeItem() {
+    console.log("Test to try removing items.");
+}
+
+function increaseQuantity() {
+
+}
+
+function decreaseQuantity() {
+
 }
 
 onLoadCartNumbers();
